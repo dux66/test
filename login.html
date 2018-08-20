@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>表单制作</title></head>
+<body>
+<form action="login.php" method="post">
+<p>账号：<input type="text" name="user" value="admin" ></p>
+<p>密码：<input type="password" name="password" value="123456"></p>
+<p><input type="submit" value="提交"></p>
+</form>
+
+</body>
+</html>
+
+#!/bin/bash
+port = 80
+for domain in `cat ip.txt`
+do
+tcping ${domain} ${port} >>result.txt
+done
+file = `grep 'closed' result.txt`
+sub = tcping
+messages=`echo $file | tr '\r\n' '\n'`
+subject=`echo $sub | tr '\r\n' '\n'`
+mail1 = a273251340@qq.com
+mail2 = 499620824@qq.com
+echo "${messages}" | mail -s "${subject}" $mail1 >>/tmp/mailx.log 2>&1
+
+echo >result.txt                                                         

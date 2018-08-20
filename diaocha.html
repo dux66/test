@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>问卷调查</title>
+<meta charset="utf8">
+</head>
+<body>
+<form action="biaodan.php" method="post">
+<p>姓名: <input type="text" name="name" /></p>
+<p>性别：<input type="radio" name="sex" value="男" /> 男 <input type="radio" name="sex" value="女" /> 女 <input type="radio" name="sex" value="保密" /> 保密 </p>
+<p>名族: <input type="text" name="mingzu" /></p>
+<p>政治面貌: <input type="text" name="zhengzhi" /></p>
+<p>籍贯: <input type="text" name="jguan" /></p>
+<p>年龄：<select name="age" >
+	<option value="0-18">0-18</option>
+	<option value="19-25">19-25</option>
+	<option value="26-35">26-35</option>
+	<option value="36-45">36-45</option>
+	<option value="45-50">45-50</option>
+</select>
+</p>
+<p>毕业学院：
+<input type="checkbox" name="caixi[]" value="NBDX" />宁波大学
+<input type="checkbox" name="caixi[]" value="NBLG" />宁波理工
+<input type="checkbox" name="caixi[]"  value="NDH"/>诺丁汉
+<input type="checkbox" name="caixi[]" value="OTHER" />其他：<input type="text" name="OTHER_US" value="请输入" />
+</p>
+
+<p>工作岗位：
+<input type="text" />
+</p>
+<input type="submit" value="提交">
+</form>
+</body>
+</html>
